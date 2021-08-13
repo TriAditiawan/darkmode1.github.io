@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="" content="">
+      <title></title>
+      <style type="text/css" media="all">
+        .container{
+          width: 80%;
+          margin: 50px auto;
+        }
+        .judul{
+          font-size: 18px;
+          list-style: none;
+        }
+        ul{
+          font-size: 14px;
+          line-height: 25px;
+        }
+        .garis{
+          margin-bottom: 10px;
+          padding-top: 2px;
+          width: 100px;
+          height: 3px;
+          border-radius: 5px;
+          background-color: black;
+        }
+        .btn{
+          font-size: 1.3em;
+          background-color: black;
+          color:white;
+          padding: 10px;
+          border-radius:20px;
+        }
+        .darkmode{
+          background: black;
+          color:white;
+        }
+        .darkmode .garis{
+          background-color: white;
+        }
+        .darkmode .btn{
+          color: black;
+          background-color: white;
+        }
+      </style>
+    </head>
+    <body>
+      
+      <div class="container">
+  <button type="button" class="btn" onclick="setDarkMode()" id="darkBtn">ubah mode gelap</button>
+      <h2>SMK INFORMATIKA CBI</h2>
+      <p>
+  Selamat Datang di Website tidak Resmi SMK Informatika CBI. Sekolah SMK Nomor 1 di Sukabumi, dengan kompetensi keahlian Rekayasa Perangkat Lunak dan Mulimedia. 
+      </p>
+  <ul class="">
+    <li class="judul">Kontak Kami</li>
+    <div class="garis">
+      
+    </div>
+    <li>(0266) 734-796</li>
+    <li>SMKinformatikaCBI@gmail.com</li>
+    <li>Jl. Koramil RT 02/02 Ds. Purwasari Kec. Cicurug Kab. Sukabumi Kode Pos 43357</li>
+  </ul>
+     </div>
+    <script type="text/javascript" charset="utf-8">
+   if(localStorage.getItem('theme')=='dark') setDarkMode(true)
+       function setDarkMode(){
+       let isDark=document.body.classList.toggle('darkmode') 
+       let caption=''
+         if(isDark){
+           text="ubah mode terang"
+         localStorage.setItem('theme','dark')
+         }
+         else{
+           text="ubah mode gelap"
+          localStorage.removeItem('theme')
+         }
+        document.getElementById('darkBtn').innerHTML=text
+       }
+     </script>
+    </body>
+  </html>
